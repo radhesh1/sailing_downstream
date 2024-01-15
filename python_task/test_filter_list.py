@@ -1,7 +1,7 @@
 # test_filter_list.py
 
 import unittest
-from filter_list import filter_list
+from python_task.filter_list import filter_list
 
 class TestFilterList(unittest.TestCase):
     def test_filter_list_valid(self):
