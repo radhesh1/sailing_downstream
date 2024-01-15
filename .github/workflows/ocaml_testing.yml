@@ -1,0 +1,33 @@
+name: OCaml CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ocaml: [4.12]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up OCaml
+        uses: ocaml/setup-ocaml@v2
+        with:
+          ocaml-compiler: ${{ matrix.ocaml }}
+
+      - name: Install dependencies
+        run: |
+         opam install -y dune alcotest
+         sudo apt install ocaml dune
+
+      - name: Build and run tests
+        run: dune runtest

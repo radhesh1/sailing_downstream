@@ -1,0 +1,23 @@
+# dune run
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/radhesh-go/.cache/dune/db
+# Workspace root: /home/radhesh-go/coding/github/sailing_downstream/ocaml_task
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; installed_env =
+#      map
+#        { "INSIDE_DUNE" :
+#            "/home/radhesh-go/coding/github/sailing_downstream/ocaml_task/_build/default"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; instrument_with = []
+#  }
+$ /home/radhesh-go/.opam/4.12.0/bin/ocamlc.opt -config > /tmp/dune_640661_output
