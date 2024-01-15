@@ -1,5 +1,3 @@
-# .github/workflows/main.yml
-
 name: Node.js CI
 
 on:
@@ -21,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          path: 'javascript_task'  # Set the working directory
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -28,9 +28,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: |
-         cd javascript_task
-         npm install --save-dev jest
+        run: npm install --save-dev jest
+        working-directory: javascript_task  # Set the working directory
 
       - name: Run tests
-        run: npm test
+        run: npm test 
+        working-directory: javascript_task  # Set the working directory
