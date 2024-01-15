@@ -25,4 +25,4 @@ jobs:
         
     - name: Run tests
       run: |
-        python -m unittest test_filter_list.py
+        python -m unittest python_task.test_filter_list
