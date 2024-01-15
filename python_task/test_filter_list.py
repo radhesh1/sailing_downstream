@@ -1,0 +1,19 @@
+# test_filter_list.py
+
+import unittest
+from filter_list import filter_list
+
+class TestFilterList(unittest.TestCase):
+    def test_filter_list_valid(self):
+        input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+        result = filter_list(input_list)
+        expected_result = [1, 4, 5, 7, 8, 11, 13, 14, 17, 19]
+        self.assertEqual(result, expected_result)
+
+    def test_filter_list_invalid_length(self):
+        input_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        with self.assertRaises(ValueError):
+            filter_list(input_list)
+
+if __name__ == "__main__":
+    unittest.main()
