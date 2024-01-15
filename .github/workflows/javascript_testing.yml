@@ -28,9 +28,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm install --save-dev jest
-        working-directory: javascript_task  # Set the working directory
+        run: |
+          cd javascript_task  # Change directory to the working directory
+          npm install --save-dev jest
 
       - name: Run tests
-        run: npm test 
-        working-directory: javascript_task  # Set the working directory
+        run: |
+          cd javascript_task  # Change directory to the working directory
+          npm test
