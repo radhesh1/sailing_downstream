@@ -29,9 +29,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          ls javascript_task/javascript_task
+          cd javascript_task/javascript_task
+          npm install --save-dev jest
 
       - name: Run tests
         run: |
-          cd javascript_task  # Change directory to the working directory
+          cd javascript_task/javascript_task  # Change directory to the working directory
           npm test
