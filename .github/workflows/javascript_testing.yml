@@ -29,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          ls javascript_task
+          ls javascript_task/javascript_task
 
       - name: Run tests
         run: |
