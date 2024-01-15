@@ -29,8 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          ls 
-          ls ..
+          ls javascript_task
 
       - name: Run tests
         run: |
